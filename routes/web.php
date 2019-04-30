@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('blog.index');
+});
+
+//  Route::get('/post/{id}', function ($id, $name) {
+//     return view('blog.post')->name('post.show');
+// });
+
+Route::get('/post/{id}', function () {
+  return view('blog.post')->name('post');
 });
